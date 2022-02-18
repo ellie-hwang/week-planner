@@ -10,7 +10,7 @@ function showModal(event) {
 
 var $submitButton = document.querySelector('#submit-button');
 
-$submitButton.addEventListener('submit', closeModal); // changed to click
+$submitButton.addEventListener('click', closeModal); // changed to click
 
 $addEntry.addEventListener('click', showModal);
 
