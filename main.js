@@ -10,7 +10,7 @@ function showModal(event) {
 
 var $submitButton = document.querySelector('#submit-button');
 
-$submitButton.addEventListener('submit', closeModal);
+$submitButton.addEventListener('click', closeModal); // changed to click
 
 $addEntry.addEventListener('click', showModal);
 
@@ -33,4 +33,13 @@ function createEntry(event) {
   };
 
   data.entries.unshift(entryObj);
+  data.nextEntryId++;
+  $form.reset();
 }
+
+// function renderEntry(entryObj) {
+//   var $thead = document.createElement('thead');
+//   var $tr = document.createElement('tr');
+//   var $th = document.createElement('th');
+//   $th.textContent = 'Time';
+// }

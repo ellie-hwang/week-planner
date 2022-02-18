@@ -1,6 +1,8 @@
-// var data = {
-//   view: 'Monday',
-//   entries: [],
-//   editing: null,
-//   nextEntryId: 1
-// };
+/* exported data */
+
+var data = {
+  view: 'Monday',
+  entries: [],
+  editing: null,
+  nextEntryId: 1
+};
