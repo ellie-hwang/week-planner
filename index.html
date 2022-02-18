@@ -26,7 +26,7 @@
           <div class="justify-center align-center dialog-box ">
             <form class="">
               <h1 class="text-align-center">Add Entry</h1>
-              <select name="days">
+              <select required name="day">
                 <option>Day of the Week</option>
                 <option value="Sunday">Sunday</option>
                 <option value="Monday">Monday</option>
@@ -36,10 +36,10 @@
                 <option value="Friday">Friday</option>
                 <option value="Saturday">Saturday</option>
               </select>
-              <input type="time">
-              <textarea class="display-block margin-10-bottom" rows="5" cols="40"></textarea>
+              <input required type="time" name="time">
+              <textarea required name="description" class="display-block margin-10-bottom" rows="5" cols="40"></textarea>
               <div class="text-align-right">
-                <button id="submit-button">Submit</button>
+                <button id="submit-button" type="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -103,5 +103,6 @@
   </div>
 
   <script src="main.js"></script>
+  <script src="data.js"></script>
 </body>
 </html>
