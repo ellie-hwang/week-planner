@@ -8,9 +8,24 @@
 }
 
 .align-center {
+  min-height: 50vh;
   align-items: center;
+  align-content: center;
 }
 
-#add-entry {
-  display: block;
+.black-bg {
+  background-color: rgb(15, 15, 15, 80%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.white-text {
+  color: white;
 }
