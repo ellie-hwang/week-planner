@@ -7,6 +7,11 @@
   display: flex;
 }
 
+.justify-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .align-center {
   min-height: 50vh;
   align-items: center;
@@ -60,4 +65,11 @@ input {
 
 .margin-10-bottom {
   margin-bottom: 10px;
+}
+
+.day-button {
+  width: 100px;
+  height: 90px;
+
+  /* padding: 50px 10px; */
 }
