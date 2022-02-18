@@ -13,7 +13,7 @@
         <h2>Weekly Planner</h2>
       </div>
       <div class="column-full">
-        <div class="black-bg">
+        <div class="black-bg hidden">
           <div class="justify-center align-center dialog-box ">
             <form class="">
               <h1 class="text-align-center">Add Entry</h1>
@@ -28,12 +28,14 @@
                 <option value="Saturday">Saturday</option>
               </select>
               <input type="time">
-              <textarea class="display-block" rows="5"></textarea>
-              <button>Submit</button>
+              <textarea class="display-block margin-10-bottom" rows="5" cols="40"></textarea>
+              <div class="text-align-right">
+                <button id="submit-button">Submit</button>
+              </div>
             </form>
           </div>
         </div>
-        <div class="justify-center align-center hidden">
+        <div class="justify-center align-center">
           <button id="add-entry">Add Entry</button>
         </div>
       </div>
