@@ -22,6 +22,8 @@ var $form = document.querySelector('form');
 
 $form.addEventListener('submit', createEntry);
 
+var $select = document.querySelector('select');
+
 function createEntry(event) {
   event.preventDefault();
   var entryObj = {
@@ -30,8 +32,13 @@ function createEntry(event) {
     entryId: data.nextEntryId
   };
 
-  data.entries.unshift(entryObj);
-  data.nextEntryId++;
+  if ($select.value === 'Monday') {
+    data.monday.push(entryObj);
+    data.nextEntryId++;
+  }
+
+  // data.entries.unshift(entryObj);
+  // data.nextEntryId++;
   $form.reset();
 }
 
@@ -68,6 +75,9 @@ var $entryList = document.querySelector('#planner-view');
 window.addEventListener('DOMContentLoaded', displayEntries);
 
 function displayEntries(event) {
+  if (data.monday.length !== 0) {
+    return;
+  }
   for (let i = 0; i < data.monday.length; i++) {
     var $entries = renderEntry(data.monday[i]);
     $entryList.appendChild($entries);
