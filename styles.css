@@ -106,3 +106,7 @@ th:nth-child(odd),
 td:nth-child(odd) {
   border-right: 1px solid black;
 }
+
+td:empty::after {
+  content: "\00a0";
+}

@@ -66,4 +66,12 @@ function renderEntry(entryObj) {
   return $table;
 }
 
-renderEntry(data.entries[0]);
+var $entryList = document.querySelector('#planner-view');
+window.addEventListener('DOMContentLoaded', displayEntries);
+
+function displayEntries(event) {
+  for (let i = 0; i < data.entries.length; i++) {
+    var $entries = renderEntry(data.entries[i]);
+    $entryList.appendChild($entries);
+  }
+}
