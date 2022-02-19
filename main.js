@@ -37,19 +37,33 @@ function createEntry(event) {
   $form.reset();
 }
 
-// function renderEntry(entryObj) {
-//   var $table = document.createElement('table');
-//   var $thead = document.createElement('thead');
-//   var $trow1 = document.createElement('tr');
-//   var $thTime = document.createElement('th');
-//   $thTime.textContent = 'Time';
-//   var $thDescription = document.createElement('th');
-//   $thDescription.textContent = 'Description';
-//   $table.appendChild($thead);
-//   $thead.appendChild($trow1);
-//   $trow1.appendChild($thTime);
-//   $trow1.appendChild($thDescription);
+function renderEntry(entryObj) {
+  var $table = document.createElement('table');
+  var $thead = document.createElement('thead');
+  var $trow1 = document.createElement('tr');
+  var $thTime = document.createElement('th');
+  $thTime.textContent = 'Time';
+  var $thDescription = document.createElement('th');
+  $thDescription.textContent = 'Description';
+  $table.appendChild($thead);
+  $thead.appendChild($trow1);
+  $trow1.appendChild($thTime);
+  $trow1.appendChild($thDescription);
 
-//   return $table;
+  var $tbody = document.createElement('tbody');
 
-// }
+  for (var i = 0; i < 8; i++) {
+    var row = document.createElement('tr');
+    $tbody.appendChild(row);
+    var td = document.createElement('td');
+    var td2 = document.createElement('td');
+    row.appendChild(td);
+    row.appendChild(td2);
+  }
+
+  $table.appendChild($tbody);
+
+  return $table;
+}
+
+renderEntry(data.entries[0]);
