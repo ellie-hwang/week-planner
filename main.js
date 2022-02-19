@@ -24,7 +24,6 @@ $form.addEventListener('submit', createEntry);
 
 function createEntry(event) {
   event.preventDefault();
-
   var entryObj = {
     time: $form.elements.time.value,
     description: $form.elements.description.value,
@@ -74,6 +73,25 @@ function displayEntries(event) {
     $entryList.appendChild($entries);
   }
 }
+/*
+var $day = document.querySelectorAll('option');
+console.log('the value of select is: ', $day);
 
-// var $day = document.querySelector('select');
-// // console.log('the value of select is: ', $day);
+var $select = document.querySelector('select');
+$select.addEventListener('click', clickedFunction);
+
+function clickedFunction(event) {
+  console.log('hello');
+}
+
+var $days = document.querySelector('#days');
+$days.addEventListener('click', days);
+
+function days(event) {
+  if (event.target.textContent === 'Monday') {
+    for (var i = 0; i < data.monday.length; i++) {
+      renderEntry(data.monday[i]);
+    }
+  }
+}
+*/
