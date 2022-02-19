@@ -64,6 +64,10 @@ function renderEntry(entryObj) {
     var td2 = document.createElement('td');
     row.appendChild(td);
     row.appendChild(td2);
+    if (data.Monday !== null) {
+      td.textContent = data.Monday[i].time;
+      td2.textContent = data.Monday[i].description;
+    }
   }
 
   $table.appendChild($tbody);
@@ -75,9 +79,9 @@ var $entryList = document.querySelector('#planner-view');
 window.addEventListener('DOMContentLoaded', displayEntries);
 
 function displayEntries(event) {
-  if (data.monday.length !== 0) {
-    return;
-  }
+  // if (data.monday.length !== 0) {
+  //   return;
+  // }
   for (let i = 0; i < data.monday.length; i++) {
     var $entries = renderEntry(data.monday[i]);
     $entryList.appendChild($entries);
