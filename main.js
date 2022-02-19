@@ -26,7 +26,6 @@ function createEntry(event) {
   event.preventDefault();
 
   var entryObj = {
-    day: $form.elements.day.value,
     time: $form.elements.time.value,
     description: $form.elements.description.value,
     entryId: data.nextEntryId
@@ -70,8 +69,11 @@ var $entryList = document.querySelector('#planner-view');
 window.addEventListener('DOMContentLoaded', displayEntries);
 
 function displayEntries(event) {
-  for (let i = 0; i < data.entries.length; i++) {
-    var $entries = renderEntry(data.entries[i]);
+  for (let i = 0; i < data.monday.length; i++) {
+    var $entries = renderEntry(data.monday[i]);
     $entryList.appendChild($entries);
   }
 }
+
+// var $day = document.querySelector('select');
+// // console.log('the value of select is: ', $day);

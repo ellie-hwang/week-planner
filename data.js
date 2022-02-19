@@ -2,7 +2,13 @@
 
 var data = {
   view: 'Monday',
-  entries: [],
+  monday: [],
+  tuesday: [],
+  wednesday: [],
+  thursday: [],
+  friday: [],
+  saturday: [],
+  sunday: [],
   editing: null,
   nextEntryId: 1
 };
